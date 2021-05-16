@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="AppStartRegexGeneratorTest.testGenerateTestFile" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="RegexGenerator.test" />
+    <useClassPathOnly />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.conti.regex.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.personal.regex" />
+    <option name="MAIN_CLASS_NAME" value="com.personal.regex.AppStartRegexGeneratorTest" />
+    <option name="METHOD_NAME" value="testGenerateTestFile" />
+    <option name="TEST_OBJECT" value="method" />
+    <option name="PARAMETERS" value="" />
+    <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,13 @@
+ext {
+    mainClass = 'com.personal.regex.AppStartRegexGenerator'
+    projectVersion = '2.0.0'
+    jarFolderPath = 'C:\\IVI\\Apps\\RegexGenerator'
+
+    subProjectNames = [':gui-utils', ':app-info']
+    compileClassPaths = []
+    compileJarFilePaths = []
+    testCompileClassPaths = []
+    testCompileJarFilePaths = []
+}
+
+apply from: gradle.ext.rootDirPath + '/common_build.gradle'
