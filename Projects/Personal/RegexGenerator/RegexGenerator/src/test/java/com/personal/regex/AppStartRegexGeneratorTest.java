@@ -21,15 +21,14 @@ class AppStartRegexGeneratorTest {
 	@Test
 	void testGenerateTestFile() throws Exception {
 
-		final Path testFileFolderPath = Paths.get(PathUtils.ROOT_PATH,
-				"tmp", "RegexGenerator", "regex_test_files");
+		final String testFileFolderPathString = Paths.get(PathUtils.createRootPath(),
+				"tmp", "RegexGenerator", "regex_test_files").toString();
 
 		Logger.printProgress("generating test files inside folder:");
-		Logger.printLine(testFileFolderPath);
+		Logger.printLine(testFileFolderPathString);
 
-		FactoryFolderCreator.getInstance().createDirectories(testFileFolderPath, true);
+		FactoryFolderCreator.getInstance().createDirectories(testFileFolderPathString, true);
 
-		final String testFileFolderPathString = testFileFolderPath.toString();
 		for (int i = 0; i < 100; i++) {
 
 			final Path testFilePath = Paths.get(testFileFolderPathString,

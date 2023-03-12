@@ -1,7 +1,6 @@
 package com.personal.regex;
 
-import com.personal.regex.gui.WindowMainRegexGenerator;
-import com.utils.app_info.FactoryAppInfo;
+import com.personal.regex.gui.ApplicationRegexGenerator;
 import com.utils.log.Logger;
 
 import javafx.application.Application;
@@ -16,8 +15,6 @@ public final class AppStartRegexGenerator {
 
 		Logger.setDebugMode(false);
 
-		FactoryAppInfo.initialize("Regex Generator", "2.0.0");
-
-		Application.launch(WindowMainRegexGenerator.class);
+		Application.launch(ApplicationRegexGenerator.class);
 	}
 }

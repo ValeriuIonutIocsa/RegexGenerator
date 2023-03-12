@@ -1,9 +1,12 @@
 ext {
     mainClass = 'com.personal.regex.AppStartRegexGenerator'
     projectVersion = '2.0.0'
-    jarFolderPath = 'C:\\IVI\\Apps\\RegexGenerator'
+    jarFolderPath = 'C:\\IVI\\Apps\\Scripts\\General\\RegexGenerator'
 
-    subProjectNames = [':gui-utils', ':app-info']
+    subProjectNames = [
+            ':jfx-utils',
+            ':app-info'
+    ]
     compileClassPaths = []
     compileJarFilePaths = []
     testCompileClassPaths = []

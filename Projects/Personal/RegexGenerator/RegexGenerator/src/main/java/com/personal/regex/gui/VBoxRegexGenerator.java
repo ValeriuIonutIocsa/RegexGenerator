@@ -1,10 +1,10 @@
 package com.personal.regex.gui;
 
-import com.utils.gui_utils.CustomControlAbstr;
-import com.utils.gui_utils.GuiUtils;
-import com.utils.gui_utils.factories.BasicControlsFactory;
-import com.utils.gui_utils.factories.LayoutControlsFactory;
-import com.utils.gui_utils.objects.search_and_filter.VBoxPatterns;
+import com.utils.gui.AbstractCustomControl;
+import com.utils.gui.GuiUtils;
+import com.utils.gui.factories.BasicControlsFactories;
+import com.utils.gui.factories.LayoutControlsFactories;
+import com.utils.gui.objects.search_and_filter.VBoxPatterns;
 import com.utils.string.regex.custom_patterns.CustomPatterns;
 
 import javafx.geometry.Pos;
@@ -15,7 +15,7 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 
-class VBoxRegexGenerator extends CustomControlAbstr<VBox> {
+class VBoxRegexGenerator extends AbstractCustomControl<VBox> {
 
 	private final VBoxPatterns vBoxPatterns;
 	private final TextField textFieldPattern;
@@ -23,13 +23,13 @@ class VBoxRegexGenerator extends CustomControlAbstr<VBox> {
 	VBoxRegexGenerator() {
 
 		vBoxPatterns = new VBoxPatterns(event -> generateRegex());
-		textFieldPattern = BasicControlsFactory.createTextField("");
+		textFieldPattern = BasicControlsFactories.getInstance().createTextField("");
 	}
 
 	@Override
 	protected VBox createRoot() {
 
-		final VBox vBoxRoot = LayoutControlsFactory.createVBox();
+		final VBox vBoxRoot = LayoutControlsFactories.getInstance().createVBox();
 
 		GuiUtils.addToVBox(vBoxRoot, vBoxPatterns.getRoot(),
 				Pos.CENTER_LEFT, Priority.ALWAYS, 7, 7, 7, 7);
@@ -46,14 +46,14 @@ class VBoxRegexGenerator extends CustomControlAbstr<VBox> {
 
 	private HBox createHBoxBottom() {
 
-		final HBox hBoxBottom = LayoutControlsFactory.createHBox();
+		final HBox hBoxBottom = LayoutControlsFactories.getInstance().createHBox();
 
 		final Region region = new Region();
 		GuiUtils.addToHBox(hBoxBottom, region,
 				Pos.CENTER_LEFT, Priority.ALWAYS, 0, 0, 0, 0);
 
 		final Button buttonGenerateRegex =
-				BasicControlsFactory.createButton("Generate Regex");
+				BasicControlsFactories.getInstance().createButton("Generate Regex");
 		buttonGenerateRegex.setOnAction(event -> generateRegex());
 		GuiUtils.addToHBox(hBoxBottom, buttonGenerateRegex,
 				Pos.CENTER_LEFT, Priority.NEVER, 0, 7, 0, 7);
